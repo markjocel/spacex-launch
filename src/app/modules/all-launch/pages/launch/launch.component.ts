@@ -33,7 +33,6 @@ export class LaunchComponent implements OnInit {
         if(limit > launches.length){
           this.maxLimit = true
         }
-        console.log(launches)
       })
     }
   }
@@ -65,11 +64,9 @@ export class LaunchComponent implements OnInit {
     this.launchDate = event.date
     this.maxLimit = false
     this.filterLaunchData(event.name,event.date,this.limit)
-    console.log(event.name,event.date)
   }
 
   resetData(event:any){
-    console.log("Here")
     this.limit = 4
     this.filtered = false
     this.maxLimit = false
@@ -77,14 +74,12 @@ export class LaunchComponent implements OnInit {
   }
 
   viewMore(launchInfo:Launch){
-    console.log(launchInfo)
     this.hiddenInfo = false
     this.closed = false
     this.selectedLaunch = launchInfo
   }
 
   close(){
-    console.log("Here")
     this.closed = true
   }
 

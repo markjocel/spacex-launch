@@ -22,7 +22,6 @@ export class HeaderComponent implements OnInit {
 
   filterData(name:string, date:string){
     this.filterEvent.emit({name, date})
-    console.log(name,date)
   }
 
   resetData(){
