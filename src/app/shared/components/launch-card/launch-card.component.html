@@ -1,0 +1,29 @@
+<div class="launch-card">
+    <div class="d-flex align-items-center">
+        <div>
+            <span class="number">0{{launch?.flight_number}}</span>
+        </div>
+        <div>
+            <span class="name">{{launch?.mission_name}}</span>
+        </div>
+    </div>
+    
+    <div class="d-flex mt-1">
+        <div class="launch-image-holder">
+            <img src="{{launch?.links?.mission_patch_small}}" alt="">
+        </div>
+        <div class="d-flex flex-column">
+            <p class="mb-1">{{launch?.details}}</p>
+            <p *ngIf=!launch?.details class="mb-1">No launch details available.</p>
+
+            <div *ngIf=launch?.links?.video_link class="d-flex align-items-center mt-auto">
+                <img src="/assets/icons/youtube.png" width="25px" alt=""><a href="{{launch?.links?.video_link}}" class="mr-1" target="_blank" rel="noopener noreferrer">Watch Video</a>
+            
+                <img src="/assets/icons/wiki.png" width="25px" alt=""><a href="{{launch?.links?.wikipedia}}" target="_blank" rel="noopener noreferrer">Read Article</a>
+            </div>
+            <button class="yellow-button" (click)="viewMore(launch?.flight_number)">
+                View More
+            </button>
+        </div>
+    </div>
+</div>

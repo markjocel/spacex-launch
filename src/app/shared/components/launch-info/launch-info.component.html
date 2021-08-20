@@ -1,0 +1,14 @@
+<div class="launch-info">
+    <span class="close" (click)="close()">✕</span>
+
+    <h1>{{launchInfo?.mission_name}}</h1>
+    <hr>
+    <p>{{launchInfo?.details}}</p>
+    <p *ngIf=!launchInfo?.details>No launch details available.</p>
+    <br>
+    <p><span class="bold">Rocket Name: </span>{{launchInfo?.rocket?.rocket_name}}</p>
+    <br>
+    <p><span class="bold">Launch Site: </span>{{launchInfo?.launch_site?.site_name_long}}</p>
+    <br>
+    <p><span class="bold">Launch Date: </span>{{launchInfo?.launch_date_local | date}}</p>
+</div>

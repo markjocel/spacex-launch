@@ -1,0 +1,70 @@
+.filter-white{
+    filter: invert(96%) sepia(96%) saturate(0%) hue-rotate(68deg) brightness(105%) contrast(105%);
+}
+
+img{
+    cursor: pointer;
+}
+
+.header{
+    margin-bottom: 1rem;
+}
+
+.filter{
+    position: absolute;
+    right: .5rem;
+    background: rgba($color: #000000, $alpha: .9);
+    height: 11.5rem;
+    width: 20rem;
+    top: 3rem;
+    padding: 1rem 1.8rem;
+    color: white;
+    border-radius: 1rem;
+    font-size: .8rem;
+}
+
+.filter::before{
+    display: block;
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    background: rgba($color: #000000, $alpha: .9);
+    position: absolute;
+    top: -0.5rem;
+    right: 26px;
+    transform: rotate(45deg);
+}
+
+.close{
+    position: absolute;
+    right: 1rem;
+    font-size: 1.3rem;
+    top: .5rem;
+    cursor: pointer;
+}
+
+.text-input{
+    border-radius: .5rem;
+    border-style: solid;
+    outline: none;
+    padding: 0.4rem 0.8rem;
+    border-width: 1.5px;
+    width: 11rem;
+}
+.label{
+    margin-right: 1rem;
+}
+
+.d-flex span{
+    white-space: nowrap;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

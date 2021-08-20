@@ -1,0 +1,11 @@
+<app-header (filterEvent)=filter($event) (resetEvent)=resetData($event)></app-header>
+<div class="launches scrollable row" (scroll)=scroll($event)>
+    <div *ngFor="let launch of launches"  class="col-lg-6 col-xs-12 mb-1">
+        <app-launch-card [launch] = launch (selectLaunchEvent)=viewMore($event)></app-launch-card>
+    </div>
+
+    <span *ngIf="maxLimit" class="max">End of results</span>
+</div>
+<div *ngIf="!closed">
+    <app-launch-info [launchInfo]=selectedLaunch [hidden]=hiddenInfo (closeInfo)=close()></app-launch-info>
+</div>

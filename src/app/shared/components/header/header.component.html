@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-between header">
+    <img src="" alt="" class="filter-white" width="25">
+    <div class="d-flex">
+        <img src="/assets/icons/filter.png" alt="" class="filter-white mr-1" width="25" (click)=toggleFilter()>
+        <!-- <img src="/assets/icons/search.png" alt="" class="filter-white" width="25"> -->
+    </div>
+
+    <div *ngIf="filter" class="filter">
+        <span class="close" (click)=toggleFilter()>✕</span>
+        <div class="d-flex align-items-center mt-2">
+            <span class="label">Rocket Name:</span>
+            <input type="text" class="text-input" #rocketName [(ngModel)]="name">
+        </div>
+        <div class="d-flex align-items-center mt-1">
+            <span class="label">Launch Date:</span>
+            <input type="number" class="text-input" #launchDate [(ngModel)]="date">
+        </div>
+        <div class="d-flex justify-content-between">
+            <button class="yellow-button" (click)=filterData(rocketName.value,launchDate.value)>
+                Filter
+            </button>
+            
+            <button class="yellow-outline-button" (click)=resetData()>
+                Reset
+            </button>
+
+        </div>
+    </div>
+</div>
